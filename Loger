@@ -1,5 +1,0 @@
-class Logger {
-    private static final String LOG_FILE = "logs.txt";
-
-    // Resto del código de la clase Logger (sin cambios)
-}
