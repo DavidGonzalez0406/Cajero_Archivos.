@@ -29,3 +29,30 @@ class Administrador {
             }
         }
     }
+private void mostrarLog() {
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(LOG_FILE));
+            String linea;
+
+            System.out.println("\nListado de acciones en el log:");
+            while ((linea = bufferedReader.readLine()) != null) {
+                System.out.println(linea);
+            }
+
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void mostrarCantidadBilletes() {
+        CajeroAutomático cajero = new CajeroAutomático(BILLETES_FILE);
+        Map<String, Integer> billetes = cajero.getBilletes();
+
+        System.out.println("\nCantidad de billetes restantes:");
+        System.out.println("Denominación\tCantidad");
+        for (Map.Entry<String, Integer> entry : billetes.entrySet()) {
+            System.out.println(entry.getKey() + "\t\t\t" + entry.getValue());
+        }
+    }
+}
