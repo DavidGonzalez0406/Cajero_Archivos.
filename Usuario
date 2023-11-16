@@ -11,7 +11,7 @@ class Usuario {
     public Usuario(String nombre, String nip) {
         this.nombre = nombre;
         this.nip = nip;
-        this.saldo = new Random().nextInt(49001) + 1000; // Saldo aleatorio entre $1,000 y $50,000
+        this.saldo = new Random().nextInt(49001) + 1000;
     }
 
     public String getNombre() {
