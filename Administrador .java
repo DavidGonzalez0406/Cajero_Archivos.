@@ -55,3 +55,9 @@ class Administrador {
         // Lógica para restablecer cantidad de billetes (puedes implementar según tus necesidades)
     }
 }
+class CajeroAutomático {
+    private Map<String, Integer> billetes;
+    private String billetesFile;
+
+    // Resto del código de la clase CajeroAutomático (sin cambios)
+}
