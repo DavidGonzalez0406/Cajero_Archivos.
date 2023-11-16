@@ -84,10 +84,7 @@ class CajeroAutomático {
     }
 
     private void actualizarBilletes(int cantidad) {
-        // Lógica para actualizar la cantidad de billetes después de un retiro
-        // ...
 
-        // Actualizar billetes después del retiro
         billetes.put("100", billetes.get("100") - cantidadBilletes("100", cantidad));
         billetes.put("200", billetes.get("200") - cantidadBilletes("200", cantidad));
         billetes.put("500", billetes.get("500") - cantidadBilletes("500", cantidad));
